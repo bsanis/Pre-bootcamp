@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f3f3;
+}
+
+a { 
+    color: #085394; 
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.top {
+    background-color: #ccc;
+    height: 60px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 3.2rem;
+}
+
+.search {
+    flex: 1;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    margin: 0 100px;
+}
+
+.btn {
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    border: 2px solid #000;
+    box-shadow: 4px 4px #000;
+    cursor: pointer;
+}
+
+.login {
+    background-color: #2b78e4;
+    color: #fff;
+}
+
+.row { 
+    display: flex; 
+}
+
+.flex-2 { 
+    flex: 2; 
+}
+
+.flex-1 { 
+    flex: 1; 
+    margin-left: 30px;
+}
+
+.box {
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 30px;
+    border: 2px solid #999;
+}
+
+.definition {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    flex: 1;
+    text-align: center;
+}
+
+.left p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.like {
+    background-color: #ffd966;
+}
+
+.definition-text {
+    flex: 3;
+    margin-left: 20px;
+    font-size: 1.4rem;
+}
+
+.box h2 {
+    font-size: 1.7rem;
+}
+
+.add {
+    background-color: #93c47d;
+    width: 100%;
+    margin-top: 20px;
+}
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojonary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <h1 class="title">Dojonary</h1>
+            <input type="text" name="search" placeholder="Search" class="search">
+            <button class="btn login" onclick="login(this)">Login</button>
+        </div>
+        <div class="row">
+            <div class="flex-2">
+                <div class="box definition">
+                    <div class="left">
+                        <h1>ninja</h1>
+                        <p><em>noun</em></p>
+                        <p>Plural: <em>ninjas</em></p>
+                        <button class="btn like" onclick="message()">13 likes</button>
+                    </div>
+                    <p class="definition-text">A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></p>
+                </div>
+                <div class="box definition">
+                    <div class="left">
+                        <h1>ninja</h1>
+                        <p><em>noun</em></p>
+                        <p>Plural: <em>ninjas</em></p>
+                        <button class="btn like" onclick="message()">37 likes</button>
+                    </div>
+                    <p class="definition-text">A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
+                </div>
+            </div>
+            <div class="flex-1">
+                <div class="box">
+                    <h2>Dojonary is defined by YOU</h2>
+                    <button class="btn add" onclick="hide(this)">Add Definition</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

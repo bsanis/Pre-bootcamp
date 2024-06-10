@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Likes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <h1>Network</h1>
+        </div>
+        <h1 class="centered">Your Feed</h1>
+        <div class="row">
+            <div class="left">
+                <div class="user">
+                    <img src="icons/user-circle.png" alt="user" class="avatar-m">
+                    <p><a href="#">Add an avatar</a></p>
+                    <h2>John Doe</h2>
+                </div>
+            </div>
+            <div class="right">
+                <div class="post">
+                    <div class="top-line">
+                        <h2>Neil M</h2>
+                        <div class="likes">
+                            <span id="post-1">9 like(s)</span>
+                            <button class="like-btn" onclick="like(0)">Like</button>
+                        </div>
+                    </div>
+                    <p>I just set up this new discord bot, let me know what you all think. <a href="#">link</a></p>
+                </div>
+                <div class="post">
+                    <div class="top-line">
+                        <h2>Nichole K</h2>
+                        <div class="likes">
+                            <span id="post-2">12 like(s)</span>
+                            <button class="like-btn" onclick="like(1)">Like</button>
+                        </div>
+                    </div>
+                    <p>Just finished my <a href="#">next comic</a>, check it out.</p>
+                </div>
+                <div class="post">
+                    <div class="top-line">
+                        <h2>Jim R</h2>
+                        <div class="likes">
+                            <span id="post-3">9 like(s)</span>
+                            <button class="like-btn" onclick="like(2)">Like</button>
+                        </div>
+                    </div>
+                    <p>I can't stop listening to the <a href="#">new album</a>. Who else is liking it?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.top {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.centered {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #999;
+    margin-bottom: 40px;
+}
+
+.row {
+    display: flex;
+}
+
+.left {
+    flex: 1;
+}
+
+.user {
+    padding: 20px;
+    border: 2px solid #999;
+    text-align: center;
+}
+
+.avatar-m {
+    height: 128px;
+    margin: 20px;
+}
+
+.left p {
+    margin: 20px;
+}
+
+.right {
+    flex: 2;
+    margin-left: 30px;
+}
+
+.post {
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 2px solid #999;
+    font-size: 1.2rem;
+}
+
+.top-line {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px
+}
+
+.like-btn {
+    background-color: #ffd966;
+    padding: 5px 10px;
+    border: 2px solid #000;
+    box-shadow: 4px 4px #000;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+console.log("page loading...");
+
+// index     0  1   2
+var likes = [9, 12, 9];
+var spans = [
+    document.querySelector("#post-1"),
+    document.querySelector("#post-2"),
+    document.querySelector("#post-3")
+];
+
+function like(id) {
+    likes[id]++;
+    spans[id].innerHTML = likes[id] + "like(s)";
+}
