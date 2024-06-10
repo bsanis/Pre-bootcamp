@@ -1,0 +1,62 @@
+<!DOCTYPE html>  
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ninja</title>
+    </head>
+    <body>
+        <h1>Ninja</h1>
+        <p>
+            Ninja are practitioners of the Japanese art of 
+            <a href="https://en.wikipedia.org/wiki/Ninjutsu">ninjutsu.</a>
+        </p>
+        <p>Some common techniques are:</p>
+        <ul>
+            <li>Stealth</li>
+            <li>Disguise</li>
+            <li>Kenjutsu</li>
+        </ul>
+        <input type="text" name="first name"> <br>
+        <input type="number" name="age"><br>
+        <input type="password" name="password"><br>
+        <input type="date" name="dob"><br>
+        <input type="color" name="text color"><br>
+        <input type="checkbox" name="accept" id="accept">
+            <label for="accept">I agree</label><br>
+        <textarea name="comment" cols="20" rows="5"></textarea><br>
+        <input type="radio" name="font" value="bold" id="bold">
+            <label for="bold"><strong>Bold</strong></label><br>
+        <input type="radio" name="font" value="normal" id="normal">
+            <label for="normal"><strong>normal</strong></label><br>
+        <select name="snack">
+            <option value="almonds">almonds</option>
+            <option value="cheese and crackers">cheese and crackers</option>
+            <option value="pita and hummus">pita and hummus</option>
+            <option value="pears">pears</option>
+        </select> <br><br><br><br>
+
+        <form action="/process" method="post">
+        <div>
+            <div>
+                <label>Name: </label>
+                <input type="text" name="name" placeholder="Your name..." >
+            </div>
+            <div>
+                <label>Email: </label>
+                <input type="text" name="email" 
+                placeholder="Your email..." >
+            </div>
+            <div>
+                <input type="checkbox" name="offers" 
+                id="offers" checked >
+                <label for="offers">I would like 
+                to receive email offers!</label>
+            </div>
+            <input type="submit" value="Sign Up!" >
+        </div>
+        </form>
+        
+
+    </body>
+</html>
+
