@@ -1,0 +1,33 @@
+#button1{
+    margin: 10px;
+    height: 30px;
+    width: 150px;
+background-color:rgb(229, 224, 224) ;
+border-radius:50px ;
+border-color:rgb(62, 200, 145);
+color:rgb(62, 200, 145);
+font-size: 15px;;
+}
+
+#button2{
+    height: 25px;
+    width: 40px;
+    margin: 10px;
+    border-radius: 50%;
+    color: white;
+    background-color:rgb(62, 200, 145) ;
+    border-color: rgb(62, 200, 145);
+    font-size: 20px;
+
+}
+
+#button3{
+    margin: 10px;
+    height: 30px;
+    width: 170px;
+    background-color: rgb(105, 105, 247);
+    color: white;
+    box-shadow: 7px 7px 7px black;
+    border-color: black;
+
+}

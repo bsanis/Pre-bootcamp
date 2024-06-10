@@ -1,0 +1,41 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    background-color: rgb(57, 55, 55);
+}
+
+.nav-title{
+    color: white;
+    display: flex;
+    align-items:flex;
+    justify-content: center;
+    margin-right: 1000px;
+}
+
+.nav-links{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+}
+
+a{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-right: 20px;
+    color: white;
+}
+
+a:active{
+    color: whitesmoke;
+}
+
+
+.btn{
+    background-color: aqua;
+    box-shadow: 5px 5px 5px black;
+}
+
+
