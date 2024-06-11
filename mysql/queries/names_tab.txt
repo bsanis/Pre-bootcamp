@@ -1,0 +1,10 @@
+select * FROM names;
+INSERT INTO names (first_name,last_name,email ) values ("anis","ben selma","anis@gmail.com") ;
+INSERT INTO names (first_name,last_name,email ) values ("Ahmed","ben selma","ahmed@gmail.com") ,("Elaa","ben selma","Elaa@gmail.com") ;
+select * from names;
+SELECT user FROM names WHERE email LIKE "anis@gmail.com";
+SELECT user From names where id like last_value;
+ALTER user where id like 3 with last_name = "Pancakes";
+DELETE FROM names where id = 2 ;
+SELECT * FROM names ORDER BY first_name ASC;
+SELECT * FROM names ORDER BY first_name DESC;

@@ -1,0 +1,16 @@
+ //insert into dojos (name) values ("shogun_dojo"),("panzer_dojo"),("hannibal_dojo");
+//delete from dojos where id IN (1, 2, 3);
+//insert into dojos (name) values ("shogun_dojo"),("panzer_dojo"),("hannibal_dojo");
+//insert into ninjas (first_name,last_name,age,dojo_id) values
+("Ahmed_youssef","bs",8,4) , ("Elaa","bs",5,4) , ("Malek","bs",3,4) ;
+
+// insert into ninjas (first_name,last_name,age,dojo_id) values
+("Raja","bs",70,5) , ("Ahmed","bs",39,5) , ("Anis","bs",40,5) ;
+
+//insert into ninjas (first_name,last_name,age,dojo_id) values
+("Habib","bs",69,6) , ("Walid","bs",48,6) , ("Basma","bs",40,6) ;
+
+// select * from dojos left join ninjas on dojos.id = ninja.dojos_id where dojo_id = 4;
+
+// select* from dojos left join ninjas on dojos.id = ninjas.dojo_id where
+    dojos.id = (select dojo_id from ninjas order by dojo_id desc;);
