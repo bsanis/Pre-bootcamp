@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        form{
+        margin-left: 700px;
+        }
+        #nb{
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>guess the number</title>
+</head>
+<body>
+    <h1>Welcome to the great number game</h1>
+    <p>I'm thinking about a number between 1 and 100</p> 
+    <p> Take a guess</p>
+    <form action="/guess" method="post">
+    <input type="number" id="nb" name="nb" min="0" max="100" /><br>
+    <input type="submit" value="guess"/>
+    </form>
+
+    <div>
+        {% if 'guess' in session: %}
+            {% if session['guess'] == session['num'] %}
+                <div>
+                    <h2>You got the number!</h2>
+                    <a href="/reset">Play Again</a>
+                </div>
+            {% elif session['guess'] < session['num'] %}
+                <div>
+                    <h2>Too Low!!!</h2>
+                    
+                </div>
+            {% else %}
+                <div>
+                    <h2>Too High!!!</h2>
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
